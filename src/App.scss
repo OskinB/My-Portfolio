@@ -1,3 +1,8 @@
+@import 'sass/variables';
+@import 'sass/mixins';
+@import 'sass/header';
+@import 'sass/footer';
+
 .App {
   text-align: center;
 }
@@ -7,7 +12,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: red;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
