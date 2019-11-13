@@ -37,7 +37,6 @@ const ProjectCard = (props) => {
                         </div>
                     );
                 })}
-
         </div>
     );
 }
