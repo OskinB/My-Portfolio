@@ -2,7 +2,8 @@ import React from "react";
 // import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 import "../App";
 
-function ProjectCard(props) {
+const ProjectCard = (props) => {
+
 
     // const richTextOptions = {
     //   renderNode: {
@@ -16,18 +17,22 @@ function ProjectCard(props) {
             {props.project.length &&
                 props.project.map((project, index) => {
                     return (
-                        <div key={index} className="card">
-                            <div className="port-info">
-                                <h2>Name - {project.fields.name}</h2>
-                                <h2>Title - {project.fields.nameOfProject}</h2>
-                                <h4>Subtitle - {project.fields.projectNameInfo}</h4>
-                                <p>Short description - {project.fields.shortDescriptionOfTheProject}</p>
-                            </div>
-                            <div className="port-img">
-                                <img src='{project.fields.projectScreenshots.fields.file.url}' alt="Project Cover" />
-                            </div>
-                            <div className="port-btn">
-                                <button type="button">Closer look</button>
+                        <div className="page-title">
+                            <h1>My Portfolio</h1>
+                            <h2>Take a look at my work</h2>
+                            <div key={index} className="card">
+                                <div className="port-info">
+                                    <h2>Name - {project.fields.name}</h2>
+                                    <h2>Title - {project.fields.nameOfProject}</h2>
+                                    <h4>Subtitle - {project.fields.projectNameInfo}</h4>
+                                    <p>Short description - {project.fields.shortDescriptionOfTheProject}</p>
+                                </div>
+                                <div className="port-img">
+                                    <img src='{project.fields.projectScreenshots.fields.file.url}' alt="Project Cover" />
+                                </div>
+                                <div className="port-btn">
+                                    <button type="button">Closer look</button>
+                                </div>
                             </div>
                         </div>
                     );

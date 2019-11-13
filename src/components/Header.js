@@ -1,17 +1,20 @@
 import React from "react";
 import "../App";
 
-function Header(props) {
+const Header = () => {
+
+
     return (
+       
         <div>
             <nav>
                 <h1>Ósk Björns</h1>
                 <h2>Jr. Web Developer</h2>
                 <ul>
-                    <a href="index.html">
+                    <a href="">
                         <li>Portfolio</li>
                     </a>
-                    <a href="about-me.html">
+                    <a href="">
                         <li>About Me</li>
                     </a>
                 </ul>
