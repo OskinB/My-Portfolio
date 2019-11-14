@@ -1,10 +1,36 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { createClient } from 'contentful';
 import "../../App";
+import ProjectCard from "../ProjectCard";
 
 const Portfolio = () => {
+
+    const [projects, setProjects] = useState([]);
+
+    useEffect(() => {
+        // Create Contentful client
+        const client = createClient({
+            space: "adiok1jnhv9f",
+            accessToken: "JYCP8-I1NtiaQu495eLZfxOSV9zoQIrHcHf_fZqkD2A"
+        });
+
+        // Get projects
+        client
+            .getEntries({
+                content_type: "project"
+            })
+            .then(entries => {
+                setProjects([...projects, ...entries.items]);
+            });
+    }, []);
+
     return (
-        <div>
-            <h1>PAGE Portfolio here!</h1>
+        <div className="container">
+            <div className="section-title">
+                <h1>My Portfolio</h1>
+                <h2>Take a look at my work</h2>
+            </div>
+            <ProjectCard project={projects} />
         </div>
     );
 }

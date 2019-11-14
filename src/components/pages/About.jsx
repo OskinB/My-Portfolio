@@ -17,7 +17,7 @@ const Portfolio = () => {
             accessToken: 'JYCP8-I1NtiaQu495eLZfxOSV9zoQIrHcHf_fZqkD2A'
         });
 
-        // Get projects
+        // Get about me
         client.getEntries({
             content_type: "aboutMe"
         }).then(entries => {
