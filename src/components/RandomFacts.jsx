@@ -1,7 +1,7 @@
 import React from "react";
 import "../App";
 
-const Skills = (props) => {
+const RandomFacts = (props) => {
     console.log(props);
     return (
         <div>
@@ -12,9 +12,11 @@ const Skills = (props) => {
                             <div className="section-title">
                                 <h1>Random Facts</h1>
                             </div>
-                            <img src="../assets/github-icon-dark.png" alt="GitHub"/>
-                            <p>> {random.fields.randomFacts}</p>
-                            <p>{random.fields.githubLink}</p>
+                            <div className="random-facts">
+                                <p> > {random.fields.randomFacts}</p>
+                            </div>
+                            <p>Go to my</p>
+                            <a href={random.fields.githubLink} target="_blank" > <img src={require('../assets/github-icon-dark.png')} alt="GitHub" /></a>
                         </div>
                     );
                 })}
@@ -22,4 +24,4 @@ const Skills = (props) => {
     );
 }
 
-export default Skills;
+export default RandomFacts;

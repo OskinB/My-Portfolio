@@ -1,33 +1,30 @@
 import React from "react";
-// import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 import "../App";
+import ProjectModal from "./ProjectModal";
+
 
 const ProjectCard = (props) => {
 
-    // const richTextOptions = {
-    //   renderNode: {
-    //     'embedded-asset-block': (node, children) =>
-    //       `<img src="${node.data.target.fields.image.fields.file.url}" width="400">`
-    //   }
-    // };
-
     return (
         <div>
-            {props.project.length &&
-                props.project.map((project, index) => {
+            {props.projects.length &&
+                props.projects.map((project, index) => {
                     return (
                         <div key={index} className="card">
                             <div className="port-info">
-                                <h2>Title - {project.fields.nameOfProject}</h2>
-                                <h4>Subtitle - {project.fields.projectNameInfo}</h4>
-                                <p>Short description - {project.fields.shortDescriptionOfTheProject}</p>
+                                <h2>{project.fields.nameOfProject}</h2>
+                                <h4>{project.fields.projectNameInfo}</h4>
                             </div>
+
                             <div className="port-img">
-                                <img src='{project.fields.projectScreenshots.fields.file.url}' alt="Project Cover" />
+                              <img src={project.fields.projectCover.fields.file.url} alt="Cover"/>
                             </div>
+                      
+
                             <div className="port-btn">
-                                <button type="button">Closer look</button>
+                                <a href={"#" + project.sys.id}>Closer Look</a>
                             </div>
+                            <ProjectModal project={project} />
                         </div>
                     );
                 })}

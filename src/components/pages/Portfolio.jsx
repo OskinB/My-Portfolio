@@ -30,7 +30,7 @@ const Portfolio = () => {
                 <h1>My Portfolio</h1>
                 <h2>Take a look at my work</h2>
             </div>
-            <ProjectCard project={projects} />
+            <ProjectCard projects={projects} />
         </div>
     );
 }
