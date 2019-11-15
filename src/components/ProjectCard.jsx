@@ -24,7 +24,7 @@ const ProjectCard = (props) => {
                             <div className="port-btn">
                                 <a href={"#" + project.sys.id}>Closer Look</a>
                             </div>
-                            <ProjectModal project={project} />
+                            <ProjectModal key={index} project={project} />
                         </div>
                     );
                 })}

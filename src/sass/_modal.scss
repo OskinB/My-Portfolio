@@ -20,7 +20,8 @@
 }
 // Modal window itself
 .modalDialog > div {
-    width: 400px;
+    width: 800px;
+    height: 500px;
     position: relative;
     // sleppa margin og svo stilla miðju
     margin: 5% auto;
@@ -30,6 +31,7 @@
     background: -moz-linear-gradient(#fff, #999);
     background: -webkit-linear-gradient(#fff, #999);
     background: -o-linear-gradient(#fff, #999);
+    overflow: hidden;
 }
 .close {
     background: #606061;
@@ -56,3 +58,4 @@
 .modal-img img {
     height: 300px;
 }
+
