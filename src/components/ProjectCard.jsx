@@ -11,20 +11,24 @@ const ProjectCard = (props) => {
                 props.projects.map((project, index) => {
                     return (
                         <div key={index} className="card">
-                            <div className="port-info">
-                                <h2>{project.fields.nameOfProject}</h2>
-                                <h4>{project.fields.projectNameInfo}</h4>
+
+                            <div className="card-info">
+
+                                <div className="port-img">
+                                    <img src={project.fields.projectCover.fields.file.url} alt="Cover" />
+                                </div>
+
+                                <div className="port-info">
+                                    <h2>{project.fields.nameOfProject}</h2>
+                                    <h4>{project.fields.projectNameInfo}</h4>
+                                </div>
+
+                                <div className="port-btn">
+                                    <a href={"#" + project.sys.id}>Closer Look</a>
+                                </div>
+                                <ProjectModal key={index} project={project} />
                             </div>
 
-                            <div className="port-img">
-                              <img src={project.fields.projectCover.fields.file.url} alt="Cover"/>
-                            </div>
-                      
-
-                            <div className="port-btn">
-                                <a href={"#" + project.sys.id}>Closer Look</a>
-                            </div>
-                            <ProjectModal key={index} project={project} />
                         </div>
                     );
                 })}

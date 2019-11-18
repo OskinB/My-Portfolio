@@ -24,10 +24,9 @@ const Portfolio = () => {
             setAboutMe([...aboutMe, ...entries.items]);
         });
     }, []);
-    // console.log(aboutMe);
 
     return (
-        <div className="container">
+        <div>
             <AboutMe about={aboutMe} />
             <Skills about={aboutMe} />
             <RandomFacts about={aboutMe}/>

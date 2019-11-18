@@ -28,7 +28,9 @@ const Portfolio = () => {
         <div className="container">
             <div className="section-title">
                 <h1>My Portfolio</h1>
-                <h2>Take a look at my work</h2>
+                {/* <div className="section-subtitle"> */}
+                    <h2>Take a look at my work</h2>
+                {/* </div> */}
             </div>
             <ProjectCard projects={projects} />
         </div>

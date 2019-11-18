@@ -7,9 +7,8 @@ label {
 	color: #fff;
 	transition: transform 400ms ease-out;
 	display: inline-block;
-	min-height: 500px;
-    width: 800px;
-    height: 500px;
+    width: 652px;
+    height: 408px;
 	position: relative;
 	z-index: 1;
 	text-align: center;
@@ -72,11 +71,6 @@ label {
 	background: #444;
 	background-size: cover;
 	font-size: 3rem;
-}
-
-label[for="diamonds"],
-label[for="hearts"] {
-	background: #cc0000;
 }
 
 label:before,

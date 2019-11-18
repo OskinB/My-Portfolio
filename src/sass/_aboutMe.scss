@@ -1,13 +1,118 @@
-.section-title {
-    margin: 30px 0;
-    color: blueviolet;
+.section-title h3 {
+    color: $primary-color;
     font-family: $title-font;
+    font-size: 20px;
 }
 
-.about-info {
-    margin: 30px 0;
+.page-about-me {
+    margin-bottom: 150px;
 
-    p {
-        font-family: $text-font;
+    .about-info {
+        margin: 30px 0;
+        color: white;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .about-right-column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .contact {
+                font-size: 20px;
+
+                h3 {
+                    font-family: $title-font;
+
+                }
+
+                h4 {
+                    font-family: $text-font;
+
+                }
+
+                .contact-blue {
+                    color: $primary-color;
+                }
+
+            }
+        }
+
+        p {
+            font-family: $text-font;
+            font-size: 16px;
+            line-height: 24px;
+            margin-right: 64px;
+        }
     }
+}
+
+.page-about-skills {
+    color: white;
+    background-color: $gray;
+    padding: 100px 0;
+
+    h1 {
+        font-family: $title-font;
+        font-size: 40px;
+    }
+
+    .skills-info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 48px 0;
+
+        .skill-level {
+            display: flex;
+            flex-direction: column;
+
+            h3 {
+                font-family: $text-font;
+                font-size: 20px;
+                text-transform: uppercase;
+                margin: 32px 0;
+            }
+
+            .skill {
+                display: flex;
+                flex-direction: row;
+            }
+        }
+    }
+}
+
+.page-about-random {
+    margin: 150px 0;
+    color: white;
+
+    .random-facts {
+        margin: 64px 40px;
+
+        .fact {
+            display: flex;
+            flex-direction: row;
+            font-family: $text-font;
+            font-size: 16px;
+            margin: 32px 0;
+
+            img {
+                margin-right: 8px;
+            }
+        }
+    }
+
+    .my-github {
+        display: flex;
+        justify-content: flex-end;
+        font-family: $text-font;
+        font-size: 24px;
+        margin: 40px 0;
+
+        p {
+            margin: 0 8px;
+        }
+    }
+
 }
