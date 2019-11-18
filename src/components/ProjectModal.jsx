@@ -5,8 +5,8 @@ const ProjectModal = (props) => {
     return (
         <div id={props.project.sys.id} className="modalDialog">
             <div>
-
                 <div className="modal-img">
+                    {/* Can't make the carousel work properly when map-ing. It shows more than 1 image at once, not 1 at a time like it's supposed to! */}
                     {/* <form>
                         {props.project.fields.projectGallery.length &&
                             props.project.fields.projectGallery.map((imgs, index) => {
@@ -22,8 +22,8 @@ const ProjectModal = (props) => {
                             })
                         }
                     </form> */}
-          
 
+                    {/* Just to show the carousel works with hard coded images. */}
                     <form>
                         <input type="radio" name="fancy" autofocus value="clubs" id="clubs" />
                         <input type="radio" name="fancy" value="hearts" id="hearts" />
@@ -35,9 +35,32 @@ const ProjectModal = (props) => {
                     </form>
                 </div>
 
+                <div className="modal-card-info">
+                    <div className="modal-middle">
+                        <div className="modal-title">
+                            <h2>{props.project.fields.nameOfProject}</h2>
+                            <h4>{props.project.fields.projectNameInfo}</h4>
+                        </div>
+                        <div className="program-lingo">
+                            {props.project.fields.programmingLanguage.length &&
+                                props.project.fields.programmingLanguage.map((lang, index) => {
+                                    return (
+                                        <div key={index}>
+                                            <h3>{lang}</h3>
+                                        </div>
+                                    )
+                                })
+                            }
+                        </div>
+                    </div>
+                    <p>{props.project.fields.description}</p>
+                    <div className="btn-view">
+                        <img src={require('../assets/open-new.svg')} alt="Open in a new window" />
+                        <a href="#">View Site</a>
+                    </div>
 
-                <h2>nafnnn{props.project.fields.nameOfProject}</h2>
-                <h4>infoooo{props.project.fields.projectNameInfo}</h4>
+                </div>
+
 
                 <a href="#close" title="Close" className="close">X</a>
             </div>

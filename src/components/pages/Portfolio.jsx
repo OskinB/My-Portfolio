@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { createClient } from 'contentful';
 import "../../App";
 import ProjectCard from "../ProjectCard";
+import Intro from "../Intro";
 
 const Portfolio = () => {
 
@@ -26,11 +27,10 @@ const Portfolio = () => {
 
     return (
         <div className="container">
+            <Intro/>
             <div className="section-title">
                 <h1>My Portfolio</h1>
-                {/* <div className="section-subtitle"> */}
-                    <h2>Take a look at my work</h2>
-                {/* </div> */}
+                <h2>Take a look at my work</h2>
             </div>
             <ProjectCard projects={projects} />
         </div>

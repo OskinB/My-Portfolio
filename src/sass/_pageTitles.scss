@@ -13,3 +13,28 @@
         font-size: 20px;
     }
 }
+
+.intro {
+    color: white;
+    background-image: url('../assets/hexagon-white.png');
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-position-y: -25px;
+    
+    .intro-text {
+        padding: 100px 0 150px;
+        text-align: center;
+
+        h3 {
+            font-size: 20px;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: $primary-color;
+            margin: 32px;
+
+        }
+    }
+}

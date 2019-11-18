@@ -17,8 +17,7 @@
             padding-left: 64px;
             height: 287px;
             min-width: 38%;
-            border-bottom: $primary-color 1px solid;
-
+            border-bottom: white 1px solid;
 
             h2 {
                 color: $primary-color;
@@ -38,7 +37,7 @@
         .port-img img {
             width: 459px;
             height: 287px;
-            border-bottom: $primary-color 1px solid;
+            border-bottom: white 1px solid;
         }
 
         .port-btn {
@@ -51,8 +50,8 @@
                 font-style: italic;
                 font-weight: bold;
                 text-decoration: none;
-                padding: 8px;
-                transform: translateY(11px);
+                padding: 10px;
+                transform: translateY(13px);
             }
         }
     }

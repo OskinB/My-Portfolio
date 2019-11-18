@@ -2,7 +2,6 @@ import React from "react";
 import "../App";
 import ProjectModal from "./ProjectModal";
 
-
 const ProjectCard = (props) => {
 
     return (
@@ -11,9 +10,7 @@ const ProjectCard = (props) => {
                 props.projects.map((project, index) => {
                     return (
                         <div key={index} className="card">
-
                             <div className="card-info">
-
                                 <div className="port-img">
                                     <img src={project.fields.projectCover.fields.file.url} alt="Cover" />
                                 </div>

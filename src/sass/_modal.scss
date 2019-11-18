@@ -8,38 +8,39 @@
     left: 0;
     background: rgba(0, 0, 0, 0.8);
     z-index: 99999;
-    opacity:0;
+    opacity: 0;
     -webkit-transition: opacity 400ms ease-in;
     -moz-transition: opacity 400ms ease-in;
     transition: opacity 400ms ease-in;
     pointer-events: none;
 }
+
 .modalDialog:target {
     opacity: 1;
     pointer-events: auto;
 }
+
 // Modal window itself
-.modalDialog > div {
+.modalDialog>div {
     width: 652px;
     height: 740px;
     position: relative;
     margin: 5% auto;
-    padding: 30px;
     border-radius: 10px;
-    background: $primary-color;
+    background: $whitesmoke;
     background: -moz-linear-gradient(#fff, #999);
     background: -webkit-linear-gradient(#fff, #999);
     background: -o-linear-gradient(#fff, #999);
     overflow: hidden;
 }
+
 .close {
-    background: #606061;
-    color: #FFFFFF;
+    color: black;
     line-height: 25px;
     position: absolute;
-    right: 0px;
+    right: 24px;
+    bottom: 32px;
     text-align: center;
-    top: 0px;
     width: 24px;
     text-decoration: none;
     font-weight: bold;
@@ -51,11 +52,80 @@
     box-shadow: 1px 1px 3px #000;
     z-index: 999;
 }
+
 .close:hover {
-    background: #00d9ff;
+    background: $primary-color;
 }
 
-.modal-img img {
-    height: 300px;
-}
 
+// *** Modal Content ***
+
+.modal-card-info {
+    position: absolute;
+    top: 435px;
+
+    .modal-middle {
+        display: flex;
+        flex-direction: row;
+        padding-left: 32px;
+        border-bottom: $primary-color 1px solid;
+
+        .modal-title {
+            margin: 16px 0;
+
+            h2 {
+                color: $primary-color;
+                font-family: $title-font;
+                font-size: 28px;
+                margin-bottom: 8px;
+            }
+
+            h4 {
+                font-family: $title-font;
+                font-size: 18px;
+                text-transform: uppercase;
+            }
+        }
+
+        .program-lingo {
+            display: flex;
+            flex-direction: row;
+            right: 32px;
+            position: absolute;
+            align-self: flex-end;
+
+            h3 {
+                font-family: $text-font;
+                font-size: 14px;
+                margin: 0 16px;
+                font-weight: bold;
+            }
+        }
+    }
+
+    p {
+        font-family: $text-font;
+        font-size: 16px;
+        line-height: 24px;
+        margin: 24px 32px;
+    }
+
+    .btn-view {
+        background-color: $primary-color;
+        border-radius: 4px;
+        height: 40px;
+        width: 140px;
+        font-size: 14px;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-left: 32px;
+
+        a {
+            font-family: $title-font;
+            text-decoration: none;
+            color: black;
+        }
+    }
+}
